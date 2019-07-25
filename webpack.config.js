@@ -1,26 +1,30 @@
-const webpack = require('webpack')
-const { resolve } = require('path')
+const { resolve } = require('path');
 
 module.exports = {
-  name: '@latticehr/react-org-chart',
+  name: '@ekumenlabs.com/react-org-chart',
   entry: './src/index.js',
   output: {
     filename: 'index.js',
     path: resolve(__dirname, 'dist'),
-    library: '@latticehr/react-org-chart',
     libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+          }
+        }
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   externals: {
     d3: {

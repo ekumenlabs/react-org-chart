@@ -1,5 +1,9 @@
 # react-org-chart
 
+# Important:
+This project was forked from the seemingly abandoned https://github.com/coreseekdev/react-org-chart.
+Almost all of the authorship belongs to them.
+
 ### Features
 
 - High-performance D3-based SVG rendering
@@ -15,4 +19,4 @@
 | nodeHeight        | `Number` | Height of the component for each individual (Optional)                             | 100                                                                             |
 | nodeSpacing       | `Number` | Spacing between each of the nodes in the chart (Optional)                             | 12                                                                             |
 | animationDuration | `Number` | Duration of the animations in milliseconds (Optional)                              | 350                                                                            |
-| lineType          | `String` | Type of line that connects the nodes to each other (Optional)                      | “angle” “curve” 
+| lineType          | `String` | Type of line that connects the nodes to each other (Optional)                      | “angle” “curve”
